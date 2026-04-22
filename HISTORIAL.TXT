@@ -1,0 +1,24 @@
+1098765432|MAT101|Cálculo Diferencial|3.80|1
+1098765432|FIS101|Física Mecánica|2.50|1
+1098765432|PRG101|Fundamentos de Programación|4.50|1
+1098765432|FIS101|Física Mecánica|3.20|2
+1098765432|MAT201|Cálculo Integral|4.00|2
+1098765432|PRG201|Programación Orientada a Obje|4.80|2
+1098765432|EDA301|Estructuras de Datos|3.50|3
+1023456789|ADM101|Introducción a la Administrac|4.20|1
+1023456789|CON101|Contabilidad General|3.00|1
+1023456789|ECO101|Microeconomía|2.80|1
+1023456789|ECO101|Microeconomía|3.50|2
+1023456789|ADM201|Gestión Empresarial|4.00|2
+1034567890|MAT101|Cálculo Diferencial|3.10|1
+1034567890|DIN101|Dibujo Técnico|4.30|1
+1034567890|MEC101|Mecánica de Sólidos|2.90|2
+1034567890|MEC101|Mecánica de Sólidos|3.60|3
+1034567890|HID201|Hidráulica|3.80|3
+1045678901|BIO101|Biología Celular|4.70|1
+1045678901|QUI101|Química General|3.90|1
+1045678901|ANA101|Anatomía Humana|4.50|1
+1045678901|FIS101|Fisiología|4.20|2
+1056789012|DER101|Introducción al Derecho|4.00|1
+1056789012|DER102|Derecho Constitucional|3.70|1
+1056789012|DER101|Introducción al Derecho|1.80|1

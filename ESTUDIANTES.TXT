@@ -1,0 +1,5 @@
+1098765432|Laura Milena Torres Ruiz|Ingeniería de Sistemas
+1023456789|Carlos Andrés Pérez López|Administración de Empresas
+1034567890|Valentina Gómez Herrera|Ingeniería Civil
+1045678901|Juan David Ríos Montoya|Medicina
+1056789012|Daniela Ospina Castro|Derecho
