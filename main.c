@@ -33,10 +33,10 @@ static void limpiarBuffer(void);
 int main(void) {
     Estudiante *lista = NULL;
 
-    printf("\n╔════════════════════════════════════════════╗\n");
-    printf("║  SISTEMA DE HISTORIAL ACADÉMICO            ║\n");
-    printf("║  Universidad — Gestión de Notas            ║\n");
-    printf("╚════════════════════════════════════════════╝\n\n");
+    printf("\n--------------------------------------------\n");
+    printf("-  SISTEMA DE HISTORIAL ACADEMICO            -\n");
+    printf("-  Universidad--Gestion de Notas            -\n");
+    printf("----------------------------------------------\n\n");
 
     /* ── Carga inicial desde archivos ── */
     printf("Cargando datos...\n");
@@ -50,19 +50,21 @@ int main(void) {
     /* Menú principal */
     int opcion;
     do {
-        printf("\n╔════════════ MENÚ PRINCIPAL ════════════╗\n");
-        printf("║  1. Agregar nuevo estudiante            ║\n");
-        printf("║  2. Agregar asignatura a estudiante     ║\n");
-        printf("║  3. Consultar historial de estudiante   ║\n");
-        printf("║  4. Ver todos los estudiantes           ║\n");
-        printf("║  5. Detectar materias repetidas         ║\n");
-        printf("║  6. Ordenar materias de un estudiante   ║\n");
-        printf("║  7. Exportar reportes                   ║\n");
-        printf("║  8. Boletín semestral                   ║\n");
-        printf("║  0. Guardar y salir                     ║\n");
-        printf("╚════════════════════════════════════════╝\n");
+        printf("\n--------------------------------------------\n");
+        printf("-  MENU PRINCIPAL                           -\n");
+        printf("----------------------------------------------\n");
+        printf("-  1. Agregar nuevo estudiante            -\n");
+        printf("-  2. Agregar asignatura a estudiante     -\n");
+        printf("-  3. Consultar historial de estudiante   -\n");
+        printf("-  4. Ver todos los estudiantes           -\n");
+        printf("-  5. Detectar materias repetidas         -\n");
+        printf("-  6. Ordenar materias de un estudiante   -\n");
+        printf("-  7. Exportar reportes                   -\n");
+        printf("-  8. Boletin semestral                   -\n");
+        printf("-  0. Guardar y salir                     -\n");
+        printf("----------------------------------------------\n");
 
-        opcion = leerEntero("Seleccione una opción: ");
+        opcion = leerEntero("Seleccione una opcion: ");
 
         switch (opcion) {
             case 1: menuAgregarEstudiante(&lista);    break;
@@ -141,7 +143,7 @@ static void menuAgregarAsignatura(Estudiante *lista) {
     int   semestre = leerEntero("  Semestre          : ");
 
     if (semestre < 1 || semestre > 12) {
-        printf("[!] Semestre inválido (%d). Debe estar entre 1 y 12.\n", semestre);
+        printf("[!] Semestre invalido (%d). Debe estar entre 1 y 12.\n", semestre);
         return;
     }
 
@@ -166,7 +168,7 @@ static void menuConsultarEstudiante(Estudiante *lista) {
 static void menuMateriasRepetidas(Estudiante *lista) {
     char cedula[MAX_CEDULA];
     printf("\n--- Materias Repetidas ---\n");
-    printf("  (Dejar vacío para revisar todos los estudiantes)\n");
+    printf("  (Dejar vacio para revisar todos los estudiantes)\n");
     leerLinea(cedula, MAX_CEDULA, "  Cédula: ");
 
     if (strlen(cedula) == 0) {

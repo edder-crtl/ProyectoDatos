@@ -101,9 +101,7 @@ void exportarReporteGrupal(const Estudiante *lista, const char *ruta) {
    exportarBoletinSemestral (extensión opcional)
    Exporta sólo las asignaturas de un semestre dado.
    ───────────────────────────────────────────────────────────── */
-void exportarBoletinSemestral(const Estudiante *est,
-                               int semestre,
-                               const char *ruta) {
+void exportarBoletinSemestral(const Estudiante *est,int semestre,const char *ruta) {
     if (!est) return;
     FILE *f = fopen(ruta, "w");
     if (!f) {
