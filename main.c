@@ -20,6 +20,7 @@ static void menuMateriasRepetidas(Estudiante *lista);
 static void menuOrdenar(Estudiante *lista);
 static void menuExportar(Estudiante *lista);
 static void menuBoletinSemestral(Estudiante *lista);
+static void pausar(void);
 
 /* ── Utilidades de entrada ── */
 static void leerLinea(char *destino, int max, const char *prompt);
@@ -67,22 +68,23 @@ int main(void) {
         opcion = leerEntero("Seleccione una opcion: ");
 
         switch (opcion) {
-            case 1: menuAgregarEstudiante(&lista);    break;
-            case 2: menuAgregarAsignatura(lista);     break;
-            case 3: menuConsultarEstudiante(lista);   break;
+            case 1: menuAgregarEstudiante(&lista);  pausar();  break;
+            case 2: menuAgregarAsignatura(lista);  pausar();   break;
+            case 3: menuConsultarEstudiante(lista); pausar();  break;
             case 4:
                 printf("\n  Lista de estudiantes registrados:\n");
-                mostrarTodosEstudiantes(lista);
+                mostrarTodosEstudiantes(lista); pausar();
                 break;
-            case 5: menuMateriasRepetidas(lista);     break;
-            case 6: menuOrdenar(lista);               break;
-            case 7: menuExportar(lista);              break;
-            case 8: menuBoletinSemestral(lista);      break;
+            case 5: menuMateriasRepetidas(lista);  pausar();   break;
+            case 6: menuOrdenar(lista);       pausar();        break;
+            case 7: menuExportar(lista);       pausar();       break;
+            case 8: menuBoletinSemestral(lista);   pausar();   break;
             case 0:
                 printf("\nGuardando datos...\n");
                 guardarEstudiantes(lista, ARCHIVO_EST);
                 guardarHistorial(lista, ARCHIVO_HIST);
-                printf("¡Hasta luego!\n\n");
+                printf("¡Hasta luego!\n\n"); 
+                pausar();
                 break;
             default:
                 printf("[!] Opción inválida. Intente de nuevo.\n");
@@ -302,4 +304,11 @@ static float leerFloat(const char *prompt) {
 static void limpiarBuffer(void) {
     int c;
     while ((c = getchar()) != '\n' && c != EOF);
+
 }
+static void pausar(void) {
+        printf("\n\n  --> Presione [ENTER] para volver al menu...");
+            fflush(stdout);
+                // Como usamos fgets en otras partes, esto atrapara el Enter
+                    getchar(); 
+    }
